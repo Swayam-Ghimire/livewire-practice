@@ -1,5 +1,8 @@
 <div>
     <livewire:page-header subtitle="Here is your book list">
+
+    <input type="text" wire:model.live.debounce.700ms='text' class="search" placeholder="Search for books">
+
     <ul class="list">
         @foreach($books as $book)
             <li wire:key="{{ $book->id }}">
